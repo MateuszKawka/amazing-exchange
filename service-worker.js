@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/amazing-exchange/precache-manifest.08ef2b6f130582be26dfd111aaa54309.js"
+  "/amazing-exchange/precache-manifest.09ca6489d25f83fb8c6a7b6b028d7439.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "exchange"});
