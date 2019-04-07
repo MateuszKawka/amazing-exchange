@@ -6,7 +6,7 @@
       </b-select>
     </div>
     <div class="column is-6">
-      <p>{{calculateOutput}}</p>
+      <p>{{output}}</p>
     </div>
   </div>
 </template>
@@ -23,6 +23,9 @@ export default {
     data() {
       return this.$store.state.data;
     },
+    output() {
+      return this.$store.state.calculateValue
+    },
     outputCurrency: {
       get: function() {
         return this.$store.state.outputCurrency;
@@ -33,9 +36,7 @@ export default {
     },
 
     calculateOutput() {
-      let value = this.$store.getters.getInputText;
-      let exchange = this.$store.getters.valueOfCurrency;
-      return value * 1 * exchange;
+      this.$store.commit('CALCULATE_OUPUT')
     }
   }
 };

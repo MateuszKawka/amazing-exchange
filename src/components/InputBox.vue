@@ -1,16 +1,19 @@
 <template>
-  <div class="container">
-    {{value}}
-  </div>
+  <div class="container">{{value}}</div>
 </template>
 
 <script>
 export default {
-  name: 'InputBox',
+  name: "InputBox",
   computed: {
-    value: function() {
-      return this.$store.getters.getInputText
+    value: {
+      get() {
+        return this.$store.getters.getInputText;
+      },
+      set() {
+        this.$store.commit("CALCULATE_OUTPUT");
+      }
     }
   }
-}
+};
 </script>

@@ -8,7 +8,7 @@
         class="fingerboard__key button is-info is-inverted"
         @click="keyClick"
       >{{ item }}</button>
-      <button type="button" class="fingerboard__key button is-info is-outlined" @click="remove"><</button>
+      <button type="button" class="fingerboard__key button is-info is-inverted" @click="remove"><</button>
     </div>
   </div>
 </template>
@@ -30,9 +30,13 @@ export default {
   methods: {
     keyClick(el) {
       this.$store.commit("ADD_DIGIT", el.target.textContent);
+      this.$store.commit("SET_BASE_VALUE");
+      this.$store.commit("CALCULATE_OUTPUT");
     },
     remove() {
       this.$store.commit("REMOVE_DIGIT");
+      this.$store.commit("SET_BASE_VALUE");
+      this.$store.commit("CALCULATE_OUTPUT");
     }
   },
   mounted() {

@@ -11,7 +11,7 @@ export default {
   name: 'SwapCurrency',
   methods: {
     swap() {
-      this.$store.commit('SWAP_CURRENCY')
+      this.$store.dispatch('swapAction')
     }
   }
 }

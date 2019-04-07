@@ -1,6 +1,6 @@
 <template>
   <b-field>
-    <b-select placeholder="EUR" v-model="value">
+    <b-select v-model="value">
       <option v-for="(value, key) in data.rates" :value="key" :key="key">{{ key }}</option>>
     </b-select>
   </b-field>

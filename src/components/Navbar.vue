@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-active" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-active is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <h1 class="navbar-item">Exchange</h1>
       <a
@@ -15,7 +15,7 @@
       </a>
     </div>
     <div class="navbar-menu" id="navMenu" :class="{'is-active': visibleMenu}">
-      <a class="navbar-item">Home</a>
+      <router-link to="/main" class="navbar-item" tag="a">Main</router-link>
       <a class="navbar-item">Home</a>
     </div>
   </nav>
